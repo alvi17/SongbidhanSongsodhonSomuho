@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "alvi17.songbidhansongsodhonsomuho"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 3
+        versionName "1.2"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+
+                def newName = output.outputFile.name
+                newName = newName.replace("app-", "Songbishan_Songsodhon") //"MyAppName" -> I set my app variables in the root project
+                newName = newName.replace("release","")
+                //noinspection GroovyAssignabilityCheck
+                output.outputFile = new File(output.outputFile.parent, newName)
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:design:22.2.1'
+    compile 'com.google.android.gms:play-services-ads:7.+'
+}
