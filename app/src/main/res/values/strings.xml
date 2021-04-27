@@ -20,7 +20,7 @@
     <string name="fifteenth_title">পঞ্চদশ সংশোধনী</string>
     <string name="sixteenth_title">ষোড়শ সংশোধনী</string>
 
-
+    <string name="seventeenth_title">সপ্তদশ সংশোধনী</string>
 
 
 
@@ -199,5 +199,13 @@
 
     </string>
 
+    <string name="seventeenth">
+        আইনের শিরোনাম: সংবিধান ( সপ্তদশ সংশোধনী) আইন ২০১৮ \n
+        সংশোধনীর বিষয়বস্তু : সংরক্ষিত ৫০ টি আসন মহিলাদের জন্য আরও ২৫ বছর বরধিত করা \n
+
+        পাসের তারিখ : ০৮ জুলাই ২০১৮ \n
+        \n\n\n
+
+    </string>
 
 </resources>

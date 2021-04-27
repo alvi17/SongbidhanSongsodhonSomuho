@@ -1,15 +1,12 @@
 package alvi17.songbidhansongsodhonsomuho;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.AttributeSet;
-import android.view.Gravity;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -63,19 +60,6 @@ public class MainActivity extends AppCompatActivity {
         expListView.setAdapter(listAdapter);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=MRA17"));
-                startActivity(browserIntent);
-                Snackbar.make(view, "Visit Our Play Store Account For More Apps", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
-            }
-        });
-
-
-
         adView = new AdView(this);
         adView.setAdUnitId("ca-app-pub-6508526601344465/7391646435");
         adView.setAdSize(AdSize.BANNER);
@@ -125,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         listDataHeader.add(getResources().getString(R.string.fourteenth_title));
         listDataHeader.add(getResources().getString(R.string.fifteenth_title));
         listDataHeader.add(getResources().getString(R.string.sixteenth_title));
+        listDataHeader.add(getResources().getString(R.string.seventeenth_title));
 
         // Adding child data
 
@@ -145,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(13),getResources().getString(R.string.fourteenth) );
         listDataChild.put(listDataHeader.get(14),getResources().getString(R.string.fifteenth) );
         listDataChild.put(listDataHeader.get(15),getResources().getString(R.string.sixteenth) );
+        listDataChild.put(listDataHeader.get(16),getResources().getString(R.string.seventeenth) );
 
      //   listDataChild.put(listDataHeader.get(1), nowShowing);
 
